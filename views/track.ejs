@@ -1,13 +1,10 @@
 <h1>Tracks</h1>
 
-<div>
     <% trackResult.forEach(track => { %>
     
         <h4>Title: <%- track.name  %></h4>
         <audio controls>
-            <source src="<%- track.preview_url  %>"></audio>
+            <source src="<%- track.preview_url  %>">
         </audio>
     
-
     <% }) %>
-</div>
