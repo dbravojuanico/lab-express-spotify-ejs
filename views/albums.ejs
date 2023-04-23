@@ -1,0 +1,14 @@
+<h1>Albums search </h1>
+
+<div>
+    <% albumResult.forEach(album => { %>
+    
+        <h4>Title: <%- album.name  %></h5>
+        <h5>Popularity <%- album.popularity  %></h5>
+        <% if (album.images[0]) { %>
+            <img src="<%- album.images[0].url %>" alt="">
+        <% } %>    
+        <a href="/albums/<%- album.id  %>">View tracks</a>  
+    
+    <% }) %>
+</div>

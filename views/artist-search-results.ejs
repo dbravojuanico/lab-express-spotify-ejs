@@ -1,0 +1,14 @@
+<h1>Artist search</h1>
+
+<div>
+    <% artistResult.forEach(artist => { %>
+    
+        <h4>Artist: <%- artist.name  %></h5>
+        <h5>Popularity <%- artist.popularity  %></h5>
+        <% if (artist.images[0]) { %>
+            <img src="<%- artist.images[0].url %>" alt="">
+        <% } %>    
+        <a href="/albums/<%- artist.id  %>">View albums</a>  
+    
+    <% }) %>
+</div>
